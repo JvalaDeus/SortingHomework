@@ -26,6 +26,7 @@ public class BubbleSort {
 		return array;
 	}
 
+	// sets the starting posistion of the sorting
 	public static void sort() {
 		int first = 0;
 		int second = Array.length - 1;
