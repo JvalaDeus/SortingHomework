@@ -5,7 +5,10 @@ public class InsertionSort {
 
 	public static void main(String[] args) {
 		Array = getArray();
+		System.out.println("Original Array:");
+		printArray(Array);
 		sort(Array);
+		System.out.println("Sorted Array:");
 		printArray(Array);
 	}
 
