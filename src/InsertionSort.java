@@ -9,6 +9,19 @@ public class InsertionSort {
 		printArray(Array);
 	}
 
+	public static int[] getArray() {
+		@SuppressWarnings("resource")
+		Scanner scanner = new Scanner(System.in);
+		int[] array = new int[10];
+		int item = 0;
+		for (int i = 0; i < 10; i++) {
+			System.out.println("please enter the " + i + "th number to be sorted.");
+			item = scanner.nextInt();
+			array[i] = item;
+		}
+		return array;
+	}
+
 	public static int[] sort(int[] Array) {
 		for (int i = 1; i < Array.length; i++) {
 			int startPt = Array[i];
@@ -21,18 +34,6 @@ public class InsertionSort {
 			Array[j + 1] = startPt;
 		}
 		return Array;
-	}
-
-	public static int[] getArray() {
-		Scanner scanner = new Scanner(System.in);
-		int[] array = new int[10];
-		int item = 0;
-		for (int i = 0; i < 10; i++) {
-			System.out.println("please enter the " + i + "th number to be sorted.");
-			item = scanner.nextInt();
-			array[i] = item;
-		}
-		return array;
 	}
 
 	public static void printArray(int[] Array) {

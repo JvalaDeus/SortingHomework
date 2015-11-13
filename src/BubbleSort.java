@@ -13,6 +13,19 @@ public class BubbleSort {
 		printArray();
 	}
 
+	public static int[] getArray() {
+		@SuppressWarnings("resource")
+		Scanner scanner = new Scanner(System.in);
+		int[] array = new int[10];
+		int item = 0;
+		for (int i = 0; i < 10; i++) {
+			System.out.println("please enter the " + i + "th number to be sorted.");
+			item = scanner.nextInt();
+			array[i] = item;
+		}
+		return array;
+	}
+
 	public static void sort() {
 		int first = 0;
 		int second = Array.length - 1;
@@ -40,18 +53,6 @@ public class BubbleSort {
 		for (int i : Array) {
 			System.out.print(i + " ");
 		}
-	}
-
-	public static int[] getArray() {
-		Scanner scanner = new Scanner(System.in);
-		int[] array = new int[10];
-		int item = 0;
-		for (int i = 0; i < 10; i++) {
-			System.out.println("please enter the " + i + "th number to be sorted.");
-			item = scanner.nextInt();
-			array[i] = item;
-		}
-		return array;
 	}
 
 }
